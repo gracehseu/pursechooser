@@ -1,3 +1,4 @@
+import { formatCurrency } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
@@ -20,15 +21,24 @@ export class BrandDetailComponent implements OnInit {
   }
 
   onSubmit() {
-    // Since we have  access to the FormGroup instance we can directly output the same
     console.log(this.courseForm);
+  }
+
+  onClear() {
+    this.courseForm.reset();
+    // console.log('clear')
   }
 
   private initForm() {
     this.courseForm = new FormGroup({
-      'courseName': new FormControl(null, Validators.required),
-      'courseDesc': new FormControl([Validators.required, Validators.minLength(100)]),
-      'courseAmount': new FormControl(null)
+      'Brand': new FormControl(null),
+      'Size': new FormControl(null),
+      'Phone': new FormControl(null),
+      'Extra Dimensions': new FormControl(null),
+      'Color': new FormControl(null),
+      'Material': new FormControl(null),
+      'Price': new FormControl(null),
+      'Features': new FormControl(null)
     });
   }
 }

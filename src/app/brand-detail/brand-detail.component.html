@@ -2,8 +2,8 @@
     <div class="col-xs-12">
         <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
             <div class="row">
-                <div class="col-sm-5 form-group">
-                    <label for="courseName">Course Name</label>
+                <div class="col-sm-2 form-group">
+                    <label for="courseName">Curse Name</label>
                     <input type="text" id="courseName" class="form-control" formControlName="courseName">
                 </div>
                 <div class="col-sm-2 form-group">
@@ -17,9 +17,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <button class="btn btn-success" type="submit">Add</button>
-                    <button class="btn btn-danger" type="button">Delete</button>
-                    <button class="btn btn-primary" type="button">Clear</button>
+                    <button class="btn btn-success" type="submit">Search</button>
+                    <button class="btn btn-danger" type="button" (click)="onClear()">Clear</button>
                 </div>
             </div>
         </form>
