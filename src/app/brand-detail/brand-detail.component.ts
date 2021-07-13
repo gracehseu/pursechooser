@@ -21,6 +21,7 @@ export class BrandDetailComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("submit")
     console.log(this.courseForm);
   }
 
@@ -29,16 +30,25 @@ export class BrandDetailComponent implements OnInit {
     // console.log('clear')
   }
 
+  // download bootstrap this is so dumb
   private initForm() {
     this.courseForm = new FormGroup({
       'Brand': new FormControl(null),
       'Size': new FormControl(null),
       'Phone': new FormControl(null),
-      'Extra Dimensions': new FormControl(null),
+      'extraDimensions': new FormGroup({
+        'length': new FormControl(null),
+        'width': new FormControl(null),
+        'height': new FormControl(null),
+      }),
       'Color': new FormControl(null),
       'Material': new FormControl(null),
       'Price': new FormControl(null),
-      'Features': new FormControl(null)
+      'features': new FormGroup({
+        'strap': new FormControl(null),
+        'zipper': new FormControl(null),
+        'topHandle': new FormControl(null),
+      })
     });
   }
 }
