@@ -1,61 +1,67 @@
-<form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+<div class="row">
+    <div class =".col-md-6 .offset-md-3">
+        <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
 
-    <div class="col-sm-2 form-group">
-        <label for="courseName">Brand</label>
-        <input type="text" id="courseName" class="form-control" formControlName="Brand">
-    </div>
-    <div class="col-sm-2 form-group">
-        <label for="courseDesc">Size</label>
-        <input type="text" id="courseDesc" class="form-control" formControlName="Size">
-    </div>
-    <div class="col-sm-2 form-group">
-        <label for="courseAmount">Phone</label>
-        <input type="number" id="courseAmount" class="form-control" formControlName="Phone">
-    </div>
-    <div class ="form-row">
-        <div formGroupName="extraDimensions">
-            <div class="col-sm-2">
-                <label for="length">Length</label>
-                <input type="number" id="length" class="form-control" formControlName="length">
-            </div>
-            <div class="col-sm-2">
-                <label for="width">Width</label>
-                <input type="number" id="width" class="form-control" formControlName="width">
-            </div>
-            <div class="col-sm-2">
-                <label for="height">Height</label>
-                <input type="number" id="height" class="form-control" formControlName="height">
-            </div>
-        </div>
-    </div>
 
-    <div class="col-sm-2 form-group">
-        <label for="courseAmount">Color</label>
-        <input type="number" id="courseAmount" class="form-control" formControlName="Color">
-    </div>
-    <div class="col-sm-2 form-group">
-        <label for="courseAmount">Material</label>
-        <input type="text" id="strap" class="form-control" formControlName="Material">
-    </div>
-    <div formGroupName="features">
-        <div class="col-sm-2 form-group">
-            <input type="checkbox" id="courseAmount" class="form-control" formControlName="strap">
-            <label for="courseAmount">Strap</label>
-        </div>
-        <div class="col-sm-2 form-group">
-            <input type="checkbox" id="zipper" class="form-control" formControlName="zipper">
-            <label for="zipper">Zipper</label>
-        </div>
-        <div class="col-sm-2 form-group">
-            <input type="checkbox" id="topHandle" class="form-control" formControlName="topHandle">
-            <label for="topHandle">Top Handle</label>
-        </div>
-    </div >
+            <label for="courseName">Brand</label>
+            <input type="text" id="courseName" class="form-control" formControlName="Brand">
 
-    <div class="row">
-        <div class="col-xs-12">
-            <button class="btn btn-success" type="submit">Search</button>
-            <button class="btn btn-danger" type="button" (click)="onClear()">Clear</button>
-        </div>
+
+            <label for="courseDesc">Size</label>
+            <input type="text" id="courseDesc" class="form-control" formControlName="Size">
+            <label for="courseAmount">Phone</label>
+            <input type="number" id="courseAmount" class="form-control" formControlName="Phone">
+
+            <div formGroupName="extraDimensions">
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="length">Length</label>
+                        <input type="number" id="length" class="form-control" formControlName="length">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="width">Width</label>
+                        <input type="number" id="width" class="form-control" formControlName="width">
+
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="height">Height</label>
+                        <input type="number" id="height" class="form-control" formControlName="height">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-2 form-group">
+                <label for="courseAmount">Color</label>
+                <input type="number" id="color" class="form-control" formControlName="Color">
+            </div>
+            <div class="col-sm-2 form-group">
+                <label for="courseAmount">Material</label>
+                <input type="text" id="strap" class="form-control" formControlName="Material">
+            </div>
+            <div formGroupName="features">
+                <div class="col-sm-2 form-group">
+                    <input type="checkbox" id="courseAmount" class="form-check-input" formControlName="strap">
+                    <label for="courseAmount">Strap</label>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <input type="checkbox" id="zipper" class="form-check-input" formControlName="zipper">
+                    <label for="zipper">Zipper</label>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <input type="checkbox" id="topHandle" class="form-check-input" formControlName="topHandle">
+                    <label for="topHandle">Top Handle</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-success" type="submit">Search</button>
+                    <button class="btn btn-danger" type="button" (click)="onClear()">Clear</button>
+                </div>
+            </div>
+        </form>
+
     </div>
-</form>
+</div>
