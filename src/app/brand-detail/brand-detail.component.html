@@ -1,10 +1,28 @@
+
+<div class="uk-flex uk-flex-center">
+    <div class=".uk-align-center">
+        Hello
+    </div>
+</div>
+<div class="uk-flex uk-flex-center">
+    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
+    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 2</div>
+    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3</div>
+</div>
+
 <div class="row">
-    <div class =".col-md-6 .offset-md-3">
+    <div class ="uk-flex uk-flex-center">
         <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+            <div>
+                Brand <hr>
+                <input class="uk-input uk-form-blank uk-form-width-medium" type="text" id="courseName" class="form-control" formControlName="Brand">
+            </div>
+            <div>
+                Size
+                <hr>
+                <input class="uk-input uk-form-blank uk-form-width-medium" type="text" id="courseDesc" class="form-control" formControlName="Size">
+            </div>
 
-
-            <label for="courseName">Brand</label>
-            <input type="text" id="courseName" class="form-control" formControlName="Brand">
 
 
             <label for="courseDesc">Size</label>

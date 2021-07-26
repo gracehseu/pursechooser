@@ -2,16 +2,27 @@ import { formatCurrency } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-brand-detail',
+  selector: 'brand-detail',
   templateUrl: './brand-detail.component.html',
   styleUrls: ['./brand-detail.component.css']
 })
+
 export class BrandDetailComponent implements OnInit {
 
   courseForm: FormGroup;
-
+  brandList = [
+    'Hermes',
+    'Gucci',
+    'Chanel',
+    'Ralph Hubbard',
+    'Omar Alexander',
+    'Carlos Abbott',
+    'Miriam Wagner',
+    'Bradley Wilkerson',
+    'Virginia Andrews',
+    'Kelly Snyder',
+  ];
   constructor() {
    }
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { BrandDetailComponent } from './brand-detail/brand-detail.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent {
   title = 'angularPurse';
   brands = new FormControl();
-  brandList: string[] = ["Chanel", "Hermes", "Celine"];
 
   constructor() {
     
