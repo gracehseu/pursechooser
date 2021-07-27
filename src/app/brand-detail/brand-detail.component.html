@@ -1,82 +1,100 @@
 
 <div class="uk-flex uk-flex-center">
     <div class=".uk-align-center">
-        Hello
+        ♡ Welcome to Purse Selector ♡
     </div>
 </div>
-<div class="uk-flex uk-flex-center">
-    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 2</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3</div>
-</div>
+
 
 <div class="row">
     <div class ="uk-flex uk-flex-center">
-        <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+        <form class="uk-form-width-large" [formGroup]="courseForm" (ngSubmit)="onSubmit()">
             <div>
-                Brand <hr>
-                <input class="uk-input uk-form-blank uk-form-width-medium" type="text" id="courseName" class="form-control" formControlName="Brand">
+                Brand
+                <hr>
+                    <form  uk-grid>
+                        <label *ngFor="let brand of brandList">
+                            <div class="">
+                                <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
+                                        formControlName="Brand">{{brand}}</label>
+                            </div>
+                        </label>
+                    </form>
+                <hr>
             </div>
+            
+            <div>
+                Phone
+                <hr>
+                <div class="uk-margin">
+                    <form>
+                        <select class="uk-select">
+                            <option *ngFor="let phone of phoneList">{{phone}}
+                            </option>
+                        </select>
+                    </form>
+                </div>
+            
+                <div class="uk-text-center uk-margin">OR</div>
+                <form class="uk-grid-small" uk-grid>
+                    <label *ngFor="let text of phoneTextList">
+                        <div class=".uk-form-width-xsmall">
+                            <label>{{text}} <input class="uk-input .uk-form-width-xsmall" type="number" id="courseName"
+                                    class="form-control" formControlName="Brand"></label>
+                        </div>
+                    </label>
+                </form>
+                <hr>
+            </div>
+
             <div>
                 Size
                 <hr>
-                <input class="uk-input uk-form-blank uk-form-width-medium" type="text" id="courseDesc" class="form-control" formControlName="Size">
+                    <form class="uk-grid-small" uk-grid>
+                        <label *ngFor="let size of sizeList">
+                            <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
+                                    formControlName="Brand">{{size}}</label>
+                        </label>
+                    </form>
+                <hr>
             </div>
 
 
 
-            <label for="courseDesc">Size</label>
-            <input type="text" id="courseDesc" class="form-control" formControlName="Size">
-            <label for="courseAmount">Phone</label>
-            <input type="number" id="courseAmount" class="form-control" formControlName="Phone">
-
-            <div formGroupName="extraDimensions">
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <label for="length">Length</label>
-                        <input type="number" id="length" class="form-control" formControlName="length">
-                    </div>
-                    <div class="col-sm-4">
-                        <label for="width">Width</label>
-                        <input type="number" id="width" class="form-control" formControlName="width">
-
-                    </div>
-                    <div class="col-sm-4">
-                        <label for="height">Height</label>
-                        <input type="number" id="height" class="form-control" formControlName="height">
-                    </div>
-                </div>
+            <div>
+                Brand
+                <hr>
+                <form class="uk-grid-small" uk-grid>
+                    <label *ngFor="let color of colorList">
+                        <div class="uk-width-1-1">
+                            <label><input class="uk-checkbox" type="checkbox" id="color" class="form-control"
+                                    formControlName="Brand">{{color}}</label>
+                        </div>
+                    </label>
+                </form>
+                <hr>
             </div>
 
+            <div>
+                Miscellaneous
+                <hr>
+                <form class="uk-grid-small" uk-grid>
+                    <label *ngFor="let feature of featureList">
+                        <div class="uk-width-1-1">
+                            <label><input class="uk-checkbox" type="checkbox" id="color" class="form-control"
+                                    formControlName="Brand">{{feature}}</label>
+                        </div>
+                    </label>
+                </form>
+                <hr>
+            </div>
 
-            <div class="col-sm-2 form-group">
-                <label for="courseAmount">Color</label>
-                <input type="number" id="color" class="form-control" formControlName="Color">
-            </div>
-            <div class="col-sm-2 form-group">
-                <label for="courseAmount">Material</label>
-                <input type="text" id="strap" class="form-control" formControlName="Material">
-            </div>
-            <div formGroupName="features">
-                <div class="col-sm-2 form-group">
-                    <input type="checkbox" id="courseAmount" class="form-check-input" formControlName="strap">
-                    <label for="courseAmount">Strap</label>
-                </div>
-                <div class="col-sm-2 form-group">
-                    <input type="checkbox" id="zipper" class="form-check-input" formControlName="zipper">
-                    <label for="zipper">Zipper</label>
-                </div>
-                <div class="col-sm-2 form-group">
-                    <input type="checkbox" id="topHandle" class="form-check-input" formControlName="topHandle">
-                    <label for="topHandle">Top Handle</label>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col-xs-12">
-                    <button class="btn btn-success" type="submit">Search</button>
-                    <button class="btn btn-danger" type="button" (click)="onClear()">Clear</button>
+                    <button class="uk-button uk-button-default uk-align-left" type="button" (click)="onClear()">Clear</button>
+                    <button class="uk-button uk-button-default uk-align-right" type="submit">Search</button>
+
                 </div>
             </div>
         </form>

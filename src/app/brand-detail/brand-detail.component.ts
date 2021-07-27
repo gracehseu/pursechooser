@@ -12,17 +12,76 @@ export class BrandDetailComponent implements OnInit {
 
   courseForm: FormGroup;
   brandList = [
-    'Hermes',
-    'Gucci',
+    'Balenciaga',
+    'Bottega Veneta',
+    'Burberry',
+    'Céline',
     'Chanel',
-    'Ralph Hubbard',
-    'Omar Alexander',
-    'Carlos Abbott',
-    'Miriam Wagner',
-    'Bradley Wilkerson',
-    'Virginia Andrews',
-    'Kelly Snyder',
+    'Chloé',
+    'Dior',
+    'Fendi',
+    'Ferragamo',
+    'Givenchy',
+    'Goyard',
+    'Gucci',
+    'Hermès',
+    'Loewe',
+    'Louis Vuitton',
+    'Miu Miu',
+    'Mullberry',
+    'Prada',
+    'Proenza Schouler',
+    'Saint Laurent',
+    'Valentino'
   ];
+
+  sizeList = [
+    'XS',
+    'S',
+    'M',
+    'L',
+    'XL'
+  ];
+
+  phoneTextList = [
+    'length',
+    'width',
+    'height'
+  ];
+
+  colorList = [
+    'Black',
+    'White',
+    'Brown',
+    'Red',
+    'Orange',
+    'Yellow',
+    'Green',
+    'Blue',
+    'Purple',
+    'Pink'
+  ];
+
+  phoneList = [
+    'iPhone 6',
+    'iPhone 6s',
+    'iPhone 7',
+    'iPhone 8',
+    'iPhone X',
+    'iPhone 11',
+    'iPhone 11 Pro',
+    'Samsung Galaxy 8',
+    'Samsung Galaxy Note 5'
+  ];
+
+  featureList = [
+    'Subtle branding',
+    'Monogram',
+    'Hand held strap',
+    'Top zipper',
+    'Crossbody strap'
+  ]
+
   constructor() {
    }
 
