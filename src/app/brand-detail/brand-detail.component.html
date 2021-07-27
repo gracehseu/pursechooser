@@ -12,14 +12,17 @@
             <div>
                 Brand
                 <hr>
-                    <form  uk-grid>
-                        <label *ngFor="let brand of brandList">
-                            <div class="">
+                    <form>
+                        <div class="uk-grid-small uk-child-width-1-3" uk-grid>
+                            <div *ngFor="let brand of brandList">
+                        
                                 <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
                                         formControlName="Brand">{{brand}}</label>
                             </div>
-                        </label>
+
+                        </div>
                     </form>
+
                 <hr>
             </div>
             
@@ -36,13 +39,15 @@
                 </div>
             
                 <div class="uk-text-center uk-margin">OR</div>
-                <form class="uk-grid-small" uk-grid>
-                    <label *ngFor="let text of phoneTextList">
-                        <div class=".uk-form-width-xsmall">
-                            <label>{{text}} <input class="uk-input .uk-form-width-xsmall" type="number" id="courseName"
-                                    class="form-control" formControlName="Brand"></label>
+                <form>
+                    <div class="uk-grid-small uk-child-width-1-3" uk-grid>
+                        <div *ngFor="let text of phoneTextList">
+                
+                            <label>{{text}}<input class="uk-input" type="number" id="courseName" class="form-control"
+                                    formControlName="Brand"></label>
                         </div>
-                    </label>
+                
+                    </div>
                 </form>
                 <hr>
             </div>
@@ -50,7 +55,7 @@
             <div>
                 Size
                 <hr>
-                    <form class="uk-grid-small" uk-grid>
+                    <form class="uk-grid-small uk-child-width-1-5" uk-grid>
                         <label *ngFor="let size of sizeList">
                             <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
                                     formControlName="Brand">{{size}}</label>
@@ -62,14 +67,12 @@
 
 
             <div>
-                Brand
+                Color
                 <hr>
-                <form class="uk-grid-small" uk-grid>
+                <form class="uk-grid-small uk-child-width-1-5" uk-grid>
                     <label *ngFor="let color of colorList">
-                        <div class="uk-width-1-1">
                             <label><input class="uk-checkbox" type="checkbox" id="color" class="form-control"
                                     formControlName="Brand">{{color}}</label>
-                        </div>
                     </label>
                 </form>
                 <hr>
