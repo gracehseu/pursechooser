@@ -44,9 +44,14 @@ export class BrandDetailComponent implements OnInit {
   ];
 
   phoneTextList = [
-    'length',
-    'width',
-    'height'
+    'l',
+    'w',
+    'h'
+  ];
+
+  priceTextList = [
+    '$',
+    '$$$'
   ];
 
   colorList = [
@@ -59,7 +64,11 @@ export class BrandDetailComponent implements OnInit {
     'Green',
     'Blue',
     'Purple',
-    'Pink'
+    'Pink',
+    'Gray',
+    'Silver',
+    'Gold',
+    'Multicolor'
   ];
 
   phoneList = [
@@ -77,9 +86,15 @@ export class BrandDetailComponent implements OnInit {
   featureList = [
     'Subtle branding',
     'Monogram',
-    'Hand held strap',
-    'Top zipper',
-    'Crossbody strap'
+    'Top handle',
+    'Zippered',
+    'Crossbody strap',
+    'Bucket style',
+    'Wicker',
+    'Internal divider',
+    'Shoulder carry',
+    'Detachable strap'
+
   ]
 
   constructor() {

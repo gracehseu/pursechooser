@@ -1,8 +1,8 @@
 
-<div class="uk-flex uk-flex-center">
-    <div class=".uk-align-center">
-        ♡ Welcome to Purse Selector ♡
-    </div>
+<div class="uk-flex uk-flex-center uk-margin-top">
+    <h1 class="uk-heading-small uk-align-center">
+        ♡ Purse Selector ♡
+    </h1>
 </div>
 
 
@@ -10,26 +10,26 @@
     <div class ="uk-flex uk-flex-center">
         <form class="uk-form-width-large" [formGroup]="courseForm" (ngSubmit)="onSubmit()">
             <div>
-                Brand
-                <hr>
+                <div class="uk-heading-line uk-margin"><span>Brand</span></div>
+                <div>
                     <form>
-                        <div class="uk-grid-small uk-child-width-1-3" uk-grid>
+                        <div class="uk-grid-small uk-child-width-1-3 uk-margin-left" uk-grid>
                             <div *ngFor="let brand of brandList">
-                        
+                    
                                 <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
                                         formControlName="Brand">{{brand}}</label>
                             </div>
-
+                    
                         </div>
                     </form>
-
+                </div>
                 <hr>
             </div>
             
             <div>
-                Phone
+                Device
                 <hr>
-                <div class="uk-margin">
+                <div class="uk-margin-left uk-margin-right">
                     <form>
                         <select class="uk-select">
                             <option *ngFor="let phone of phoneList">{{phone}}
@@ -40,25 +40,56 @@
             
                 <div class="uk-text-center uk-margin">OR</div>
                 <form>
-                    <div class="uk-grid-small uk-child-width-1-3" uk-grid>
+                    <div class="uk-grid-small uk-child-width-1-3 uk-margin-left uk-margin-right" uk-grid>
                         <div *ngFor="let text of phoneTextList">
-                
-                            <label>{{text}}<input class="uk-input" type="number" id="courseName" class="form-control"
-                                    formControlName="Brand"></label>
+                            <div>
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon">{{text}}</span>
+                                    <input class="uk-input" type="text">
+                                </div>
+                            </div>
                         </div>
                 
                     </div>
                 </form>
                 <hr>
             </div>
+            <div>
+                Price
+                <hr>
+                <form>
+                    <div class="uk-flex">
+                        <div class="uk-align-left uk-margin-left uk-margin-remove-bottom">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon">$</span>
+                                <input class="uk-input" type="text">
+                            </div>
+                        </div>               
+                              
+                        <div class="uk-align-right uk-margin-left uk-margin-remove-bottom">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon">$$$</span>
+                                <input class="uk-input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <hr>
+            </div>
+
+        
+
 
             <div>
                 Size
                 <hr>
-                    <form class="uk-grid-small uk-child-width-1-5" uk-grid>
+                    <form class="uk-grid-small uk-child-width-1-5 uk-margin-left" uk-grid>
                         <label *ngFor="let size of sizeList">
-                            <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
-                                    formControlName="Brand">{{size}}</label>
+                            <div class="uk-align-center">
+                                <input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
+                                    formControlName="Brand">{{size}}
+                            </div>
+
                         </label>
                     </form>
                 <hr>
@@ -69,9 +100,9 @@
             <div>
                 Color
                 <hr>
-                <form class="uk-grid-small uk-child-width-1-5" uk-grid>
+                <form class="uk-grid-small uk-child-width-1-4 uk-margin-left" uk-grid>
                     <label *ngFor="let color of colorList">
-                            <label><input class="uk-checkbox" type="checkbox" id="color" class="form-control"
+                            <label><input class="uk-checkbox uk-icon-image" type="checkbox" id="color" class="form-control"
                                     formControlName="Brand">{{color}}</label>
                     </label>
                 </form>
@@ -81,7 +112,7 @@
             <div>
                 Miscellaneous
                 <hr>
-                <form class="uk-grid-small" uk-grid>
+                <form class="uk-grid-small uk-margin-left" uk-grid>
                     <label *ngFor="let feature of featureList">
                         <div class="uk-width-1-1">
                             <label><input class="uk-checkbox" type="checkbox" id="color" class="form-control"
