@@ -27,8 +27,7 @@
             </div>
             
             <div>
-                Device
-                <hr>
+                <div class="uk-heading-line uk-margin"><span>Device</span></div>
                 <div class="uk-margin-left uk-margin-right">
                     <form>
                         <select class="uk-select">
@@ -55,25 +54,27 @@
                 <hr>
             </div>
             <div>
-                Price
-                <hr>
-                <form>
-                    <div class="uk-flex">
-                        <div class="uk-align-left uk-margin-left uk-margin-remove-bottom">
-                            <div class="uk-inline">
-                                <span class="uk-form-icon">$</span>
-                                <input class="uk-input" type="text">
+                <div class="uk-heading-line uk-margin"><span>Price</span></div>
+                <div>
+                    <form>
+                        <div class="uk-flex uk-margin-left">
+                            <div class="uk-align-left uk-margin-remove-bottom">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon">$</span>
+                                    <input class="uk-input" type="number" min="0">
+                                </div>
                             </div>
-                        </div>               
-                              
-                        <div class="uk-align-right uk-margin-left uk-margin-remove-bottom">
-                            <div class="uk-inline">
-                                <span class="uk-form-icon">$$$</span>
-                                <input class="uk-input" type="text">
+                    
+                            <div class="uk-align-right uk-margin-right uk-margin-remove-left uk-margin-remove-bottom">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon">$$$</span>
+                                    <input class="uk-input" type="number" min="0">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+
                 <hr>
             </div>
 
@@ -81,8 +82,7 @@
 
 
             <div>
-                Size
-                <hr>
+                <div class="uk-heading-line uk-margin"><span>Size</span></div>
                     <form class="uk-grid-small uk-child-width-1-5 uk-margin-left" uk-grid>
                         <label *ngFor="let size of sizeList">
                             <div class="uk-align-center">
@@ -98,20 +98,23 @@
 
 
             <div>
-                Color
-                <hr>
+                <div class="uk-heading-line uk-margin"><span>Color</span></div>
                 <form class="uk-grid-small uk-child-width-1-4 uk-margin-left" uk-grid>
                     <label *ngFor="let color of colorList">
                             <label><input class="uk-checkbox uk-icon-image" type="checkbox" id="color" class="form-control"
                                     formControlName="Brand">{{color}}</label>
                     </label>
                 </form>
+                <div class="uk-margin">
+                    <form>
+                        <label><input class="uk-button" type="button" syle="" > green</label>
+                    </form>
+                </div>
                 <hr>
             </div>
 
             <div>
-                Miscellaneous
-                <hr>
+                <div class="uk-heading-line uk-margin"><span>Miscellaneous</span></div>
                 <form class="uk-grid-small uk-margin-left" uk-grid>
                     <label *ngFor="let feature of featureList">
                         <div class="uk-width-1-1">
