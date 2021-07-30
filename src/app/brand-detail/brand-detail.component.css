@@ -1,0 +1,814 @@
+/* -------------------RED-------------------*/
+.container_red {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_red input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: red;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_red:hover input ~ .checkmark_red {
+  background-color: red;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_red input:checked ~ .checkmark_red {
+  background-color: red;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_red/indicator (hidden when not checked) */
+.checkmark_red:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_red when checked */
+.container_red input:checked ~ .checkmark_red:after {
+    display: none;
+}
+
+
+/* -------------------BLACK-------------------*/
+.container_black {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_black input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: black;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_black:hover input ~ .checkmark_black {
+  background-color: black;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_black input:checked ~ .checkmark_black {
+  background-color: black;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_black/indicator (hidden when not checked) */
+.checkmark_black:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_black when checked */
+.container_black input:checked ~ .checkmark_black:after {
+    display: none;
+}
+
+
+/* -------------------WHITE-------------------*/
+.container_white {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_white input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_white:hover input ~ .checkmark_white {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_white input:checked ~ .checkmark_white {
+  background-color: white;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_white/indicator (hidden when not checked) */
+.checkmark_white:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_white when checked */
+.container_white input:checked ~ .checkmark_white:after {
+    display: none;
+}
+
+/* -------------------brown-------------------*/
+.container_brown {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_brown input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_brown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: brown;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_brown:hover input ~ .checkmark_brown {
+  background-color: brown;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_brown input:checked ~ .checkmark_brown {
+  background-color: brown;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_brown/indicator (hidden when not checked) */
+.checkmark_brown:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_brown when checked */
+.container_brown input:checked ~ .checkmark_brown:after {
+    display: none;
+}
+
+/* -------------------orange-------------------*/
+.container_orange {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_orange input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_orange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: orange;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_orange:hover input ~ .checkmark_orange {
+  background-color: orange;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_orange input:checked ~ .checkmark_orange {
+  background-color: orange;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_orange/indicator (hidden when not checked) */
+.checkmark_orange:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_orange when checked */
+.container_orange input:checked ~ .checkmark_orange:after {
+    display: none;
+}
+
+/* -------------------yellow-------------------*/
+.container_yellow {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_yellow input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_yellow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: yellow;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_yellow:hover input ~ .checkmark_yellow {
+  background-color: yellow;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_yellow input:checked ~ .checkmark_yellow {
+  background-color: yellow;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_yellow/indicator (hidden when not checked) */
+.checkmark_yellow:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_yellow when checked */
+.container_yellow input:checked ~ .checkmark_yellow:after {
+    display: none;
+}
+
+/* -------------------green-------------------*/
+.container_green {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_green input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: green;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_green:hover input ~ .checkmark_green {
+  background-color: green;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_green input:checked ~ .checkmark_green {
+  background-color: green;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_green/indicator (hidden when not checked) */
+.checkmark_green:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_green when checked */
+.container_green input:checked ~ .checkmark_green:after {
+    display: none;
+}
+
+/* -------------------blue-------------------*/
+.container_blue {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_blue input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: blue;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_blue:hover input ~ .checkmark_blue {
+  background-color: blue;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_blue input:checked ~ .checkmark_blue {
+  background-color: blue;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_blue/indicator (hidden when not checked) */
+.checkmark_blue:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_blue when checked */
+.container_blue input:checked ~ .checkmark_blue:after {
+    display: none;
+}
+
+/* -------------------purple-------------------*/
+.container_purple {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_purple input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_purple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: purple;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_purple:hover input ~ .checkmark_purple {
+  background-color: purple;
+}
+
+/* When the checkbox is checked, add a purple background */
+.container_purple input:checked ~ .checkmark_purple {
+  background-color: purple;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_purple/indicator (hidden when not checked) */
+.checkmark_purple:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_purple when checked */
+.container_purple input:checked ~ .checkmark_purple:after {
+    display: none;
+}
+
+/* -------------------pink-------------------*/
+.container_pink {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_pink input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_pink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: pink;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_pink:hover input ~ .checkmark_pink {
+  background-color: pink;
+}
+
+/* When the checkbox is checked, add a pink background */
+.container_pink input:checked ~ .checkmark_pink {
+  background-color: pink;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_pink/indicator (hidden when not checked) */
+.checkmark_pink:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_pink when checked */
+.container_pink input:checked ~ .checkmark_pink:after {
+    display: none;
+}
+
+/* -------------------gold-------------------*/
+.container_gold {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_gold input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_gold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: gold;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_gold:hover input ~ .checkmark_gold {
+  background-color: gold;
+}
+
+/* When the checkbox is checked, add a gold background */
+.container_gold input:checked ~ .checkmark_gold {
+  background-color: gold;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_gold/indicator (hidden when not checked) */
+.checkmark_gold:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_gold when checked */
+.container_gold input:checked ~ .checkmark_gold:after {
+    display: none;
+}
+
+/* -------------------silver-------------------*/
+.container_silver {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_silver input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_silver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: silver;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_silver:hover input ~ .checkmark_silver {
+  background-color: silver;
+}
+
+/* When the checkbox is checked, add a silver background */
+.container_silver input:checked ~ .checkmark_silver {
+  background-color: silver;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_silver/indicator (hidden when not checked) */
+.checkmark_silver:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_silver when checked */
+.container_silver input:checked ~ .checkmark_silver:after {
+    display: none;
+}
+
+/* -------------------multi-------------------*/
+.container_multi {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_multi input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_multi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom right, rgb(255, 125, 125),rgb(255, 210, 125),yellow,rgb(125, 255, 125),rgb(125, 125, 255),rgb(201, 125, 255));
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_multi:hover input ~ .checkmark_multi {
+  background-image: linear-gradient(to bottom right, rgb(255, 125, 125),rgb(255, 210, 125),yellow,rgb(125, 255, 125),rgb(125, 125, 255),rgb(201, 125, 255));
+}
+
+/* When the checkbox is checked, add a multi background */
+.container_multi input:checked ~ .checkmark_multi {
+  background-image: linear-gradient(to bottom right, rgb(255, 125, 125),rgb(255, 210, 125),yellow,rgb(125, 255, 125),rgb(125, 125, 255),rgb(201, 125, 255));
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_multi/indicator (hidden when not checked) */
+.checkmark_multi:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_multi when checked */
+.container_multi input:checked ~ .checkmark_multi:after {
+    display: none;
+}
+
+/* -------------------gold-------------------*/
+.container_gold {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_gold input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_gold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: gold;
+  border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a grey background color */
+.container_gold:hover input ~ .checkmark_gold {
+  background-color: gold;
+}
+
+/* When the checkbox is checked, add a gold background */
+.container_gold input:checked ~ .checkmark_gold {
+  background-color: gold;
+  border: 1px solid  rgb(146, 146, 146);
+}
+
+/* Create the checkmark_gold/indicator (hidden when not checked) */
+.checkmark_gold:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark_gold when checked */
+.container_gold input:checked ~ .checkmark_gold:after {
+    display: none;
+}
+
