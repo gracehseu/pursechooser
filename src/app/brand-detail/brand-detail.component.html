@@ -5,7 +5,59 @@
     </h1>
 </div>
 
+<div> 
+    <div class ="uk-flex uk-flex-center">
+        <form class="uk-form-width-large" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="uk-heading-line uk-margin"><span>Brand</span></div>
+            <div class="uk-grid-small uk-child-width-1-3 uk-margin-left" uk-grid>
+                <div *ngFor="let b of brandList; let i=index">
+                    <label>
+                        <input type="checkbox" [value]="b.name" (change)="onCheckboxChange($event)" />
+                        {{b.display}}
+                    </label>
+                </div>
+                
+            </div>
+            <hr>
+            <div>
+                <div class="uk-heading-line uk-margin"><span>Device</span></div>
+                <div class="uk-margin-left uk-margin-right">
 
+                        <select class="uk-select">
+                            <option *ngFor="let phone of phoneList">{{phone}}
+                            </option>
+                        </select>
+
+                </div>
+
+                <div class="uk-text-center uk-margin">OR</div>
+
+                    <div class="uk-grid-small uk-child-width-1-3 uk-margin-left uk-margin-right" uk-grid>
+                        <div *ngFor="let text of phoneTextList">
+                            <div>
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon">{{text}}</span>
+                                    <input class="uk-input" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                <hr>
+            </div>
+
+            <div class="row">
+                <button class="uk-button uk-button-default uk-align-left" type="button" (click)="onClear()">Clear</button>
+                <button class="uk-button uk-button-default uk-align-right" type="submit">Search</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<!-- 
 <div class="row">
     <div class ="uk-flex uk-flex-center">
         <form class="uk-form-width-large" [formGroup]="courseForm" (ngSubmit)="onSubmit()">
@@ -16,11 +68,13 @@
                         <div class="uk-grid-small uk-child-width-1-3 uk-margin-left" uk-grid>
                             <div *ngFor="let brand of brandList">
                     
-                                <label><input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
-                                        formControlName="Brand">{{brand}}</label>
+                                <label><input class="uk-checkbox" type="checkbox" id=brand.name class="form-control"
+                                        formControlName=Brand>{{brand.display}}</label>
                             </div>
                     
                         </div>
+                        <label><input class="uk-checkbox" type="checkbox" id="hermes" class="form-control"
+                                formControlName="hermes">h new</label>
                     </form>
                 </div>
                 <hr>
@@ -108,7 +162,7 @@
                     </div>
                     <div class="uk-inline">
                         <label class="container_white">
-                            <input type="checkbox">
+                            <input type="checkbox"> 
                             <span class="checkmark_white"></span>
                         </label>
                     </div>
@@ -206,4 +260,4 @@
         </form>
 
     </div>
-</div>
+</div> -->

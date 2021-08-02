@@ -1,6 +1,10 @@
 import { formatCurrency } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
+import { Form } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@angular/forms';
+import { brandList, colorList, featureList, phoneList, phoneTextList, priceTextList, sizeList } from '../constants/constant';
+
+
 
 @Component({
   selector: 'brand-detail',
@@ -10,95 +14,20 @@ import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 export class BrandDetailComponent implements OnInit {
 
-  courseForm: FormGroup;
-  brandList = [
-    'Balenciaga',
-    'Bottega Veneta',
-    'Burberry',
-    'Céline',
-    'Chanel',
-    'Chloé',
-    'Dior',
-    'Fendi',
-    'Ferragamo',
-    'Givenchy',
-    'Goyard',
-    'Gucci',
-    'Hermès',
-    'Loewe',
-    'Louis Vuitton',
-    'Miu Miu',
-    'Mullberry',
-    'Prada',
-    'Proenza Schouler',
-    'Saint Laurent',
-    'Valentino'
-  ];
+  form: FormGroup;
+  brandList = brandList;
+  sizeList = sizeList;
+  phoneTextList = phoneTextList; 
+  priceTextList = priceTextList; 
+  colorList = colorList; 
+  phoneList = phoneList; 
+  featureList = featureList; 
 
-  sizeList = [
-    'XS',
-    'S',
-    'M',
-    'L',
-    'XL'
-  ];
-
-  phoneTextList = [
-    'l',
-    'w',
-    'h'
-  ];
-
-  priceTextList = [
-    '$',
-    '$$$'
-  ];
-
-  colorList = [
-    'Black',
-    'White',
-    'Brown',
-    'Red',
-    'Orange',
-    'Yellow',
-    'Green',
-    'Blue',
-    'Purple',
-    'Pink',
-    'Gray',
-    'Silver',
-    'Gold',
-    'Multicolor'
-  ];
-
-  phoneList = [
-    'iPhone 6',
-    'iPhone 6s',
-    'iPhone 7',
-    'iPhone 8',
-    'iPhone X',
-    'iPhone 11',
-    'iPhone 11 Pro',
-    'Samsung Galaxy 8',
-    'Samsung Galaxy Note 5'
-  ];
-
-  featureList = [
-    'Subtle branding',
-    'Monogram',
-    'Top handle',
-    'Zippered',
-    'Crossbody strap',
-    'Bucket style',
-    'Wicker',
-    'Internal divider',
-    'Shoulder carry',
-    'Detachable strap'
-
-  ]
-
-  constructor() {
-   }
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      brandListArray: this.fb.array([])
+    })
+  }
 
   ngOnInit(): void {
     
@@ -107,33 +36,32 @@ export class BrandDetailComponent implements OnInit {
 
   onSubmit() {
     console.log("submit")
-    console.log(this.courseForm);
+    console.log(this.form);
   }
 
   onClear() {
-    this.courseForm.reset();
-    // console.log('clear')
+    this.form.reset();
+    console.log('clear')
   }
 
-  // download bootstrap this is so dumb
   private initForm() {
-    this.courseForm = new FormGroup({
-      'Brand': new FormControl(null),
-      'Size': new FormControl(null),
-      'Phone': new FormControl(null),
-      'extraDimensions': new FormGroup({
-        'length': new FormControl(null),
-        'width': new FormControl(null),
-        'height': new FormControl(null),
-      }),
-      'Color': new FormControl(null),
-      'Material': new FormControl(null),
-      'Price': new FormControl(null),
-      'features': new FormGroup({
-        'strap': new FormControl(null),
-        'zipper': new FormControl(null),
-        'topHandle': new FormControl(null),
-      })
-    });
+    
+  }
+
+  onCheckboxChange(e) {
+    const brandListArray: FormArray = this.form.get('brandListArray') as FormArray;
+
+    if (e.target.checked) {
+      brandListArray.push(new FormControl(e.target.value));
+    } else {
+      let i: number = 0;
+      brandListArray.controls.forEach((item: FormControl) => {
+        if (item.value == e.target.value) {
+          brandListArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
   }
 }
