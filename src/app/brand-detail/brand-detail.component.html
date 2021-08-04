@@ -66,6 +66,136 @@
                 </div>            
                 <hr>
             </div>
+            <!-- <ul uk-accordion>
+                <a class="uk-accordion-title" href="#">Item 1</a>
+                <div class="uk-accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.</p>
+                </div>
+            </ul> -->
+            <ul uk-accordion>
+                <li>
+                    <a class="uk-accordion-title uk-text-meta" href="#">Advanced Search</a>
+                    <div class="uk-accordion-content">
+
+                        <div>
+                            <div class="uk-heading-line uk-margin"><span>Size</span></div>
+                            <form class="uk-grid-small uk-child-width-1-5 uk-margin-left" uk-grid>
+                                <!-- <label *ngFor="let size of sizeList">
+                                    <div class="uk-align-center">
+                                        <input class="uk-checkbox" type="checkbox" id="courseName" class="form-control"
+                                            formControlName="Brand">{{size}}
+                                    </div>
+
+                                </label> -->
+                                <div *ngFor="let s of sizeList; let i=index">
+                                    <label>
+                                        <input type="checkbox" [value]="s" (change)="onSizeChangeEvent($event)" />
+                                        {{s}}
+                                    </label>
+                                </div>
+                            </form>
+                            <hr>
+                        </div>
+                        <div class="uk-heading-line"><span>Color</span></div>
+                            <!-- <div >
+                                <div *ngFor="let c of colorListDetail; let i=index">
+                                    <div class="uk-inline">
+                                        <label class="container_black">
+                                            <input type="checkbox" [value]="c.title" (change)="onColorChangeEvent($event)" />
+                                            <span class="c.checkbox"></span>
+                                        </label>
+                                    </div>
+                                
+                                </div>
+                            </div> -->
+
+                            <div class="uk-inline">
+                                <label class="container_black">
+                                    <input type="checkbox"  formControlName="black">
+                                    <span class="checkmark_black"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_white">
+                                    <input type="checkbox"  formControlName="white">
+                                    <span class="checkmark_white"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_brown">
+                                    <input type="checkbox"  formControlName="brown">
+                                    <span class="checkmark_brown"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_red">
+                                    <input type="checkbox"  formControlName="red">
+                                    <span class="checkmark_red"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_orange">
+                                    <input type="checkbox"  formControlName="orange">
+                                    <span class="checkmark_orange"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_yellow">
+                                    <input type="checkbox"  formControlName="yellow">
+                                    <span class="checkmark_yellow"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_green">
+                                    <input type="checkbox"  formControlName="green">
+                                    <span class="checkmark_green"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_blue">
+                                    <input type="checkbox"  formControlName="blue">
+                                    <span class="checkmark_blue"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_purple">
+                                    <input type="checkbox"  formControlName="purple">
+                                    <span class="checkmark_purple"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_pink">
+                                    <input type="checkbox"  formControlName="pink">
+                                    <span class="checkmark_pink"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_silver">
+                                    <input type="checkbox"  formControlName="silver">
+                                    <span class="checkmark_silver"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_gold">
+                                    <input type="checkbox"  formControlName="gold">
+                                    <span class="checkmark_gold"></span>
+                                </label>
+                            </div>
+                            <div class="uk-inline">
+                                <label class="container_multi">
+                                    <input type="checkbox"  formControlName="multi">
+                                    <span class="checkmark_multi"></span>
+                                </label>
+                            </div>
+                            <hr>
+                        </div>
+
+
+
+                    
+                </li>
+            </ul>
 
 
 

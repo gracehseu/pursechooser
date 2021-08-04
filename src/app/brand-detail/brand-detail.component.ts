@@ -19,7 +19,7 @@ export class BrandDetailComponent implements OnInit {
   sizeList = sizeList;
   phoneTextList = phoneTextList; 
   priceTextList = priceTextList; 
-  colorList = colorList; 
+  colorList = colorList;
   phoneList = phoneList; 
   featureList = featureList; 
 
@@ -32,6 +32,21 @@ export class BrandDetailComponent implements OnInit {
       h: new FormControl(null),
       maxPrice: new FormControl(null),
       minPrice: new FormControl(null),
+      sizeListArray: this.fb.array([]),
+      black: new FormControl(null),
+      white: new FormControl(null),
+      brown: new FormControl(null),
+      red: new FormControl(null),
+      orange: new FormControl(null),
+      yellow: new FormControl(null),
+      green: new FormControl(null),
+      blue: new FormControl(null),
+      purple: new FormControl(null),
+      pink: new FormControl(null),
+      gray: new FormControl(null),
+      silver: new FormControl(null),
+      gold: new FormControl(null),
+      multi: new FormControl(null),
     })
   }
 
@@ -105,6 +120,40 @@ export class BrandDetailComponent implements OnInit {
       brandListArray.controls.forEach((item: FormControl) => {
         if (item.value == e.target.value) {
           brandListArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+  }
+
+  onSizeChangeEvent(e) {
+    const sizeListArray: FormArray = this.form.get('sizeListArray') as FormArray;
+
+    if (e.target.checked) {
+      sizeListArray.push(new FormControl(e.target.value));
+    } else {
+      let i: number = 0;
+      sizeListArray.controls.forEach((item: FormControl) => {
+        if (item.value == e.target.value) {
+          sizeListArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+  }
+
+  onColorChangeEvent(e) {
+    const colorListArray: FormArray = this.form.get('colorListArray') as FormArray;
+
+    if (e.target.checked) {
+      colorListArray.push(new FormControl(e.target.value));
+    } else {
+      let i: number = 0;
+      colorListArray.controls.forEach((item: FormControl) => {
+        if (item.value == e.target.value) {
+          colorListArray.removeAt(i);
           return;
         }
         i++;

@@ -84,3 +84,33 @@ export const featureList = [
     'Detachable strap'
 
 ]
+
+export const colorListDetail = [
+    { 'title':  'Black',    'container': "container_black",     'checkbox': "checkmark_black" },
+    { 'title':  'White',    'container': "container_white",     'checkbox': "checkmark_white" },
+    { 'title':  'Brown',    'container': "container_brown",     'checkbox': "checkmark_brown" },
+    { 'title':  'Red',      'container': "container_red",       'checkbox': "checkmark_red" },
+    { 'title':  'Orange',   'container': "container_orange",    'checkbox': "checkmark_orange" },
+    { 'title':  'Yellow',   'container': "container_yellow",    'checkbox': "checkmark_yellow" },
+    { 'title':  'Green',    'container': "container_green",     'checkbox': "checkmark_green" },
+    { 'title':  'Blue',     'container': "container_blue",      'checkbox': "checkmark_blue" },
+    { 'title':  'Purple',   'container': "container_purple",    'checkbox': "checkmark_purple" },
+    { 'title':  'Pink',     'container': "container_pink",      'checkbox': "checkmark_pink" },
+    { 'title':  'Silver',   'container': "container_silver",    'checkbox': "checkmark_silver" },
+    { 'title':  'Gold',     'container': "container_gold",      'checkbox': "checkmark_gold" },
+    { 'title':  'Multi',    'container': "container_multi",     'checkbox': "checkmark_multi" },
+]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
