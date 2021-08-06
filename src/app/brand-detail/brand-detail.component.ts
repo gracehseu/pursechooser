@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Form } from '@angular/forms';
 import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@angular/forms';
 import { brandList, colorList, featureList, phoneList, phoneTextList, priceTextList, sizeList } from '../constants/constant';
-
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { stringify } from '@angular/compiler/src/util';
 
 
 @Component({
@@ -23,7 +25,49 @@ export class BrandDetailComponent implements OnInit {
   phoneList = phoneList; 
   featureList = featureList; 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
+    this.initForm();
+
+  }
+
+  ngOnInit(): void {
+    
+    this.initForm();
+  }
+
+  onSubmit() {
+    console.log("submit")
+    console.log(this.form.value);
+    const values = this.form.value;
+    const colorArray = [];
+    console.log('before for loop');
+    for (var i in colorList) {
+      console.log('hello');
+      console.log("colorList[i] " + colorList[i]);
+      console.log("values[colorList[i]] " + values[colorList[i]]);
+      console.log(typeof(values));
+      if (values[colorList[i]] == 'true') {
+        console.log(i + " " + colorList[i]);
+        colorArray.push(colorList[i]);
+      }
+    }
+    this.router.navigate(['/search'], 
+                { queryParams: 
+                    { brand: values.brandListArray, 
+                      size: values.sizeListArray,
+                      features: values.featureListArray,
+                      color: colorArray,
+                    }
+                });
+    
+  }
+
+  onClear() {
+    this.form.reset();
+    console.log('clear')
+  }
+
+  private initForm() {
     this.form = this.fb.group({
       brandListArray: this.fb.array([]),
       phone: new FormControl(null),
@@ -33,6 +77,7 @@ export class BrandDetailComponent implements OnInit {
       maxPrice: new FormControl(null),
       minPrice: new FormControl(null),
       sizeListArray: this.fb.array([]),
+      featureListArray: this.fb.array([]),
       black: new FormControl(null),
       white: new FormControl(null),
       brown: new FormControl(null),
@@ -50,65 +95,6 @@ export class BrandDetailComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    
-    this.initForm();
-  }
-
-  onSubmit() {
-    console.log("submit")
-    console.log(this.form.value);
-  }
-
-  onClear() {
-    this.form.reset();
-    console.log('clear')
-  }
-
-  private initForm() {
-    
-  }
-
-  // (function () {
-  //   const parent = document.querySelector('.range-slider');
-
-  //   if (!parent) {
-  //     return;
-  //   }
-
-  //   const rangeS = parent.querySelectorAll('input[type="range"]'),
-  //     numberS = parent.querySelectorAll('input[type="number"]');
-
-  //   rangeS.forEach((el) => {
-  //     el.oninput = () => {
-  //       let slide1 = parseFloat(rangeS[0].value),
-  //         slide2 = parseFloat(rangeS[1].value);
-
-  //       if (slide1 > slide2) {
-  //         [slide1, slide2] = [slide2, slide1];
-  //       }
-
-  //       numberS[0].value = slide1;
-  //       numberS[1].value = slide2;
-  //     }
-  //   });
-
-  //   numberS.forEach((el) => {
-  //     el.oninput = () => {
-  //       let number1 = parseFloat(numberS[0].value),
-  //         number2 = parseFloat(numberS[1].value);
-
-  //       if (number1 > number2) {
-  //         let tmp = number1;
-  //         numberS[0].value = number2;
-  //         numberS[1].value = tmp;
-  //       }
-
-  //       rangeS[0].value = number1;
-  //       rangeS[1].value = number2;
-  //     }
-  //   });
-  // })();
 
   onCheckboxChange(e) {
     const brandListArray: FormArray = this.form.get('brandListArray') as FormArray;
@@ -144,16 +130,18 @@ export class BrandDetailComponent implements OnInit {
     }
   }
 
-  onColorChangeEvent(e) {
-    const colorListArray: FormArray = this.form.get('colorListArray') as FormArray;
+
+
+  onFeatureChange(e) {
+    const featureListArray: FormArray = this.form.get('featureListArray') as FormArray;
 
     if (e.target.checked) {
-      colorListArray.push(new FormControl(e.target.value));
+      featureListArray.push(new FormControl(e.target.value));
     } else {
       let i: number = 0;
-      colorListArray.controls.forEach((item: FormControl) => {
+      featureListArray.controls.forEach((item: FormControl) => {
         if (item.value == e.target.value) {
-          colorListArray.removeAt(i);
+          featureListArray.removeAt(i);
           return;
         }
         i++;

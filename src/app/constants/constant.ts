@@ -72,16 +72,16 @@ export const phoneList = [
 ];
 
 export const featureList = [
-    'Subtle branding',
-    'Monogram',
-    'Top handle',
-    'Zippered',
-    'Crossbody strap',
-    'Bucket style',
-    'Wicker',
-    'Internal divider',
-    'Shoulder carry',
-    'Detachable strap'
+    { 'name': 'subtle_branding',    'display' : 'Subtle branding' },
+    { 'name': 'monogram',           'display' : 'Monogram' },
+    { 'name': 'top_handle',         'display' : 'Top handle' },
+    { 'name': 'zippered',           'display' : 'Zippered' },
+    { 'name': 'crossbody_strap',    'display' : 'Crossbody strap' },
+    { 'name': 'bucket_style',       'display' : 'Bucket style' },
+    { 'name': 'wicker',             'display' : 'Wicker' },
+    { 'name': 'internal_divider',   'display' : 'Internal divider' },
+    { 'name': 'shoulder_carry',     'display' : 'Shoulder carry' },
+    { 'name': 'detachable_strap',   'display' : 'Detachable strap'}
 
 ]
 

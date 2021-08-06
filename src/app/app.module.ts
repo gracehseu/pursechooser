@@ -8,6 +8,8 @@ import {  BrandDetailComponent } from './brand-detail/brand-detail.component';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     BrandDetailComponent,
+    SearchResultComponent,
     
   ],
   imports: [
@@ -32,6 +35,7 @@ const routes: Routes = [
     MatSelectModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
   ],
   providers: [],
