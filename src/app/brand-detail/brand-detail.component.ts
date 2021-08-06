@@ -40,23 +40,31 @@ export class BrandDetailComponent implements OnInit {
     console.log(this.form.value);
     const values = this.form.value;
     const colorArray = [];
+    const dimensions = [];
     console.log('before for loop');
-    for (var i in colorList) {
-      console.log('hello');
-      console.log("colorList[i] " + colorList[i]);
-      console.log("values[colorList[i]] " + values[colorList[i]]);
-      console.log(typeof(values));
-      if (values[colorList[i]] == 'true') {
-        console.log(i + " " + colorList[i]);
-        colorArray.push(colorList[i]);
+    for (var key in values) {
+      console.log('key' + Object.values(key));
+      if (key in colorList) {
+        console.log('key in color list');
+        colorArray.push(key);
       }
     }
+    if (values.l == null && values.w == null && values.h == null) {
+      dimensions.push(values.phone);
+    } else {
+      dimensions.push('l');
+      dimensions.push('w');
+      dimensions.push('h');
+    }
+    console.log(colorArray);
     this.router.navigate(['/search'], 
                 { queryParams: 
                     { brand: values.brandListArray, 
+                      device: dimensions,
+                      price: [values.minPrice, values.maxPrice],
                       size: values.sizeListArray,
+                      color: [],
                       features: values.featureListArray,
-                      color: colorArray,
                     }
                 });
     
