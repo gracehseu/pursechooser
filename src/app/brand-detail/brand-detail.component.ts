@@ -41,11 +41,11 @@ export class BrandDetailComponent implements OnInit {
     const values = this.form.value;
     const colorArray = [];
     const dimensions = [];
-    console.log('before for loop');
+    // console.log('before for loop');
     for (var key in values) {
-      console.log('key' + Object.values(key));
-      if (key in colorList) {
-        console.log('key in color list');
+      // console.log('key' + key);
+      if (colorList.includes(key.toString()) && values[key] == true) {
+        // console.log('key in color list');
         colorArray.push(key);
       }
     }
@@ -63,7 +63,7 @@ export class BrandDetailComponent implements OnInit {
                       device: dimensions,
                       price: [values.minPrice, values.maxPrice],
                       size: values.sizeListArray,
-                      color: [],
+                      color: colorArray,
                       features: values.featureListArray,
                     }
                 });

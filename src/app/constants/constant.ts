@@ -43,20 +43,20 @@ export const priceTextList = [
 ];
 
 export const colorList = [
-    'Black',
-    'White',
-    'Brown',
-    'Red',
-    'Orange',
-    'Yellow',
-    'Green',
-    'Blue',
-    'Purple',
-    'Pink',
-    'Gray',
-    'Silver',
-    'Gold',
-    'Multicolor'
+    'black',
+    'white',
+    'brown',
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'blue',
+    'purple',
+    'pink',
+    'gray',
+    'silver',
+    'gold',
+    'multi'
 ];
 
 export const phoneList = [
